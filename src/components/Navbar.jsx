@@ -39,18 +39,19 @@ const Navbar = () => {
         {/* desktop menu */}
         <div className="hidden md:flex items-center space-x-16">
           <div className="space-x-8">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
-          <ThemeToggle />
-
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
         </div>
         {/* mobile menu */}
         <button
@@ -80,9 +81,11 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <div className="mt-8 md:hidden">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
-      {/* <ThemeToggle /> */}
       </div>
     </nav>
   );

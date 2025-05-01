@@ -8,7 +8,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+        <h1 className="text-3xl md:text-6xl font-bold tracking-tight">
           <span className="opacity-0 animate-fade-in">Hi, I'm</span>
           <span className="text-primary opacity-0 animate-fade-in-delay-1">
             {" "}
